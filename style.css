@@ -63,8 +63,8 @@ navigation ul li a:hover::after{
     font-size:30px;
 }
 .header-text h1{
-    font-size: 60px;
-    margin-top:20px;
+    font-size: 100px;
+    margin-top:40px;
 }
 .header-text h1 span{
     color: #fa5604;
