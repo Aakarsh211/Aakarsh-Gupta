@@ -50,9 +50,9 @@
                     esteemed organization.
                 </p>
             </div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+            <p class="tab-links" onclick="opentab('education', event)">Education</p>
+            <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
             </div>
             <div class="tab-contents active-tab" id="skills">
                 <ul>
@@ -82,11 +82,11 @@
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabname){
-    for (tablink of tablinks){
+function opentab(tabname, event) {
+    for (tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
-    for (tabcontent of tabcontents){
+    for (tabcontent of tabcontents) {
         tabcontent.classList.remove("active-tab");
     }
     event.currentTarget.classList.add("active-link");
