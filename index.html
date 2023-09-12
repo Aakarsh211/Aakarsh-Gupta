@@ -49,10 +49,52 @@
                     eagerly anticipating the prospect of discussing how I can bring value to their 
                     esteemed organization.
                 </p>
+            </div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
             </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Python O.O.P</span><br>Design and implementation of Databases</li>
+                    <li><span>C++, Javascript</span><br>Designing Web interfaces, Navigation Applications</li>
+                    <li><span>Github, Multipass, VSCode</span><br>Virtual Machines, File Management</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2021-2026</span><br>BSc Computer Engineering Coop (University of Alberta)</li>
+                    <li><span>2018-2021</span><br>FFCA Highschool</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2021-2023(Summers)</span><br>IT Consultant at Panorama Animal Hospital (Calgary)</li>
+                    <li><span>2022(Summers)</span><br>Merchandise stocker at Costco (Calgary)</li>
+                </ul>
+            </div>
+            
         </div>
     </div>
 </div>
-    
+<script>
+   
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for (tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+
 </body>
 </html>
